@@ -1,0 +1,49 @@
+<div class="starter-template">
+  <table class="table table-condensed table-bordered">
+    <thead>
+      <tr>
+        <th rowspan="2">#</th>
+        <th rowspan="2">Equipo</th>
+        <th rowspan="2">Puntos</th>
+        <th rowspan="2">Jugados</th>
+        <th colspan="4">Promedios</th>
+      </tr>
+      <tr>
+        <th>Puntos</th>
+        <th>Ganados</th>
+        <th>Dif</th>
+        <th>GF</th>
+      </tr>
+    </thead>
+    <% i = 1 %>
+    <% @punteros.each do |equipo|%>
+      <tr class="success">
+        <td><%= i %></td>
+        <td><%= equipo.nombre %></td>
+        <td><%= equipo.puntos %></td>
+        <td><%= equipo.partidos %></td>
+        <td><%= sprintf( "%0.03f", equipo.puntos_sobre_partidos)  %></td>
+        <td><%= sprintf( "%0.03f", equipo.ganados_sobre_partidos) %></td>
+        <td><%= sprintf( "%0.03f", equipo.diferencia_partidos) %></td>
+        <td><%= sprintf( "%0.03f", equipo.goles_favor_sobre_partidos) %></td>
+      </tr>
+      <% i = i + 1%>
+    <% end %>
+    <% @equipos.each do |equipo|%>
+      <% clase = (i > 5 && i<=12) ? 'info': ''  %>
+      <tr class="<%= clase %>">
+        <td><%= i %></td>
+        <td><%= equipo.nombre %></td>
+        <td><%= equipo.puntos %></td>
+        <td><%= equipo.partidos %></td>
+        <td><%= sprintf( "%0.03f", equipo.puntos_sobre_partidos)  %></td>
+        <td><%= sprintf( "%0.03f", equipo.ganados_sobre_partidos) %></td>
+        <td><%= sprintf( "%0.03f", equipo.diferencia_partidos) %></td>
+        <td><%= sprintf( "%0.03f", equipo.goles_favor_sobre_partidos) %></td>
+      </tr>
+      <% i = i + 1%>
+    <% end %>
+  </table>
+</div>
+
+    
