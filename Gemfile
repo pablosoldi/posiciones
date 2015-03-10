@@ -10,8 +10,8 @@ gem 'tilt'
 gem 'puma'
 
 require 'open-uri'
-#require 'erubis'
-#require 'erb'
+require 'erubis'
+require 'erb'
 
 
 
