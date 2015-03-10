@@ -1,1 +1,1 @@
-web: bundle exec puma config.ru
+web: bundle exec rackup config.ru
