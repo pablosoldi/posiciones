@@ -7,8 +7,11 @@ gem 'hobbit-contrib', require: 'hobbit/contrib'
 gem 'rack-protection'
 gem 'nokogiri'
 gem 'tilt'
-gem 'puma'
+
 
 require 'open-uri'
 require 'erubis'
 require 'erb'
+
+
+gem 'puma'
